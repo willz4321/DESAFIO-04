@@ -1,0 +1,799 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.enlaces {
+    text-decoration: none;
+}
+
+/*====== VISUALIZACION PARA MOVIL =======*/
+
+@media screen and (min-width: 320px) {
+
+    .body-index {
+        background-color: rgb(149, 231, 250);
+        width: 100vw;
+    }
+   .body-hogar{
+    width: 100vw;
+    background-color: rgb(149, 231, 250);
+    }
+    .contenedor {
+        width: 100vw;
+        background-color: rgb(149, 231, 250);
+        display: grid;
+        grid-template-areas: 
+         "header"
+         "main"
+         "footer"
+        ;
+        grid-gap: 5px;
+    }
+    header{
+        width: 100vw;
+        grid-area: header;
+        display: grid;
+        grid-template-areas: 
+        "logo-inicio encabezado"
+        "nav nav"
+        ;
+        grid-gap: 2px 0px;
+        background-image: url('../desafio-3(segunda entrega)/media/personas.jpg');
+        background-size: contain;
+    }
+    main{
+        grid-area: main;
+    }
+    footer{
+        grid-area: footer;
+    }
+    .encabezado {
+        grid: encabezado;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 19px;
+       -webkit-text-stroke: 2px rgb(24, 173, 173);
+       -webkit-text-fill-color: transparent;
+       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        padding: 2px 0px; 
+    }
+    .logo-inicio{
+        grid-area: logo-inicio;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+    }
+     
+    .logo {
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        border-style: solid;
+        border-radius: 40px;
+    }
+
+    nav {
+        grid-area: nav;
+        width: 100vw;
+        background-color: rgba(207, 242, 237, 0.955);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border-radius: 30px;
+        padding: 10px 0px;
+    }
+    nav div a{
+        font-size: 20px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    }
+
+    main div{
+        width: 100vw;
+        padding: 20px 0px;
+        background-color: rgba(207, 242, 237, 0.955);
+         border-style: solid;
+         border-radius: 30px;
+         border-color: rgba(240, 196, 143, 0.41);
+         display: grid;
+         box-sizing: border-box;
+         grid-template-areas:
+           "seccion"
+           "media"
+           "descripcion"
+           "articulo"
+         ;
+         grid-gap: 10px;
+        }
+       .seccion {
+           grid-area: seccion;
+           width: 100vw;
+           font-size: 25px;
+           text-align: center;
+           padding: 0px 5px;
+           background-color: rgba(121, 121, 169, 0.815);
+          border: solid 3px rgba(37, 167, 190, 0.704);
+           border-radius: 20px;
+           box-sizing: border-box;
+       }
+       .media {
+           grid-area: media;
+           width: 150px;
+           height: 150px;
+           position: relative;
+           left: 85px;
+           display: flex;
+           justify-items: center;
+       }
+       .articulo {
+           grid-area: articulo;
+           font-size: 15px;
+           padding: 5px 10px;
+           text-align: left;
+       }
+       .descripcion {
+           grid-area: descripcion;
+           padding: 0px 5px;
+       }
+       ul {
+           width: 100vw;
+           display: flex;
+           flex-direction: row;
+           list-style: none;
+       }
+       .contactos {
+        width: 30px;
+        height: 30px;
+        padding: 16px 6px;
+    }
+      ul li h3 {
+          font-size: 19px;
+          position: relative;
+          top: 15px;
+      }
+      
+      .carrito-compra {
+        width: 30px;
+        height: 35px;
+        box-sizing: 1px;
+        border: none;
+        padding: 3px;
+        background-color: rgba(10, 85, 125, 0.7);
+        border-radius: 50%;   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        left: 85vw;
+        bottom: 7vh;
+        box-shadow: 1px 3px 3px 3px rgba(14, 155, 17, 0.5);  
+    }
+    .carrito-compra img {
+        width: 20px;
+        height: 25px;
+        position: relative;
+        right: 2px;
+    }
+    /*------SECCION LISTA DE COMPRAS-----*/
+
+.body-carrito {
+    width: 100vw;
+    background-color: rgba(50, 246, 246, 0.829);
+    display: grid;
+    grid-template-areas: 
+    "header-carrito"
+    "main-carrito"
+    "footer-carrito"
+    ;
+    grid-gap: 3px;
+}
+
+.body-carrito header {
+    grid-area: header-carrito;
+    display: grid;
+    grid-template-areas: 
+     "logo titulo  logo-seguro"
+     " logo  titulo seguro"
+    ;
+    grid-gap: 5px;
+}
+.titulo-carrito{
+  grid-area: titulo;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icono-tienda{
+  grid-area: logo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icono-tienda img {
+    width: 50px;
+    height: 50px;
+}
+.seguro-carrito{
+    grid-area: seguro;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.logo-sitio-seguro-carrito{
+     grid-area: logo-seguro;
+     display: flex;
+     justify-content: center;
+}
+.logo-sitio-seguro-carrito img {
+    width: 50px;
+    height: 50px;
+}
+
+           /*---MAIN DEL CARRITO---*/
+
+.body-carrito main {
+  grid-area: main-carrito; 
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.body-carrito main h2 {
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+       /*---FOOTER DEL CARRITO---*/
+
+.body-carrito footer {
+   grid-area: footer-carrito;
+} 
+.tabla {
+     display: flex;
+     justify-content: start;
+     align-items: flex-end;
+     }
+.medios-de-pago {
+     width: 100px;
+     height: 40px;
+     }
+
+}
+
+/*====== VISUALIZACION PARA TABLET =======*/
+
+@media screen and (min-width: 700px) {
+
+    .body-index {
+        background-color: rgb(149, 231, 250);
+        width: 100vw;
+    }
+    .body-hogar{
+        width: 100vw;
+        background-color: rgb(149, 231, 250);
+    }
+    .contenedor {
+        
+        width: 100vw;
+        background-color: rgb(73, 197, 197);
+        display: grid;
+        grid-template-areas: 
+         "header"
+         "main"
+         "footer"
+        ;
+        grid-gap: 5px;
+    }
+    header{
+        width: 100vw;
+        grid-area: header;
+        display: grid;
+        grid-template-areas: 
+        "logo-inicio encabezado"
+        "nav nav"
+        ;
+        grid-gap: 10px 0px;
+        background-image: url('../desafio-3(segunda entrega)/media/personas.jpg');
+        background-size: contain;
+    }
+    main{
+        grid-area: main;
+    }
+    footer{
+        grid-area: footer;
+    }
+    .encabezado {
+        grid: encabezado;
+        display: flex;
+        justify-content: start;
+        align-items: flex-end;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 40px;
+       -webkit-text-stroke: 6px rgb(24, 173, 173);
+       -webkit-text-fill-color: transparent;
+       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.442);
+        padding: 10px 0px; 
+    }
+    
+    .logo-inicio{
+        grid-area: logo-inicio;
+        display: flex;
+        justify-content: start;
+        align-items: flex-end;
+        padding: 5px;
+        transition: all .3s ease-in-out;
+    }
+    .logo {
+        width: 90px;
+        height: 90px;
+        border-style: solid;
+        border-radius: 40px;
+    }
+    nav {
+        grid-area: nav;
+        width: 100vw;
+        background-color: rgba(207, 242, 237, 0.955);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border-radius: 30px;
+        padding: 10px 0;
+    }
+    nav div a{
+        font-size: 40px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    }
+    main div{
+        width: 100vw;
+        padding: 20px 0px;
+        background-color: rgba(207, 242, 237, 0.955);
+         border-style: solid;
+         border-radius: 30px;
+         border-color: rgba(240, 196, 143, 0.41);
+         display: grid;
+         grid-template-areas: 
+         "seccion seccion"
+         "media descripcion"
+         "media articulo"
+         ;
+         grid-gap: 10px;
+        }
+       .seccion {
+           grid-area: seccion;
+           width: 100vw;
+           font-size: 40px;
+           font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+           text-align: center;
+           padding: 0px 5px;
+           background-color: rgba(121, 121, 169, 0.815);
+          border: solid 3px rgba(37, 167, 190, 0.704);
+           border-radius: 20px;
+           box-sizing: border-box;
+       }
+       .media {
+           grid-area: media;
+           width: 170px;
+           height: 170px;
+           position: relative;
+           left: 7px;
+       }
+       .articulo {
+           grid-area: articulo;
+           font-size: 25px;
+           padding: 5px 10px;
+           text-align: left;
+       }
+       .descripcion {
+           grid-area: descripcion;
+           font-size: 30px;
+           padding: 0px 5px;
+       }
+       ul {
+           width: 100vw;
+           display: flex;
+           flex-direction: row;
+           justify-content: center;
+           list-style: none;
+       }
+       .contactos {
+        width: 30px;
+        height: 30px;
+        padding: 16px 6px;
+    }
+      ul li h3 {
+          font-size: 19px;
+          position: relative;
+          top: 15px;
+      } 
+
+    .carrito-compra {
+        width: 50px;
+        height: 55px;
+        box-sizing: 1px;
+        border: none;
+        padding: 3px;
+        background-color: rgba(10, 85, 125, 0.7);
+        border-radius: 50%;   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        bottom: 0px;
+        right: 110px;
+        box-shadow: 1px 3px 3px 3px rgba(14, 155, 17, 0.5);  
+    }
+    .carrito-compra img {
+        width: 40px;
+        height: 40px;
+        position: relative;
+        right: 2px;
+    }
+    /*------SECCION LISTA DE COMPRAS-----*/
+
+.body-carrito {
+    width: 100vw;
+    background-color: rgba(50, 246, 246, 0.829);
+    display: grid;
+    grid-template-areas: 
+    "header-carrito"
+    "main-carrito"
+    "footer-carrito"
+    ;
+    grid-gap: 3px;
+}
+
+.body-carrito header {
+    grid-area: header-carrito;
+    display: grid;
+    grid-template-areas: 
+     "logo titulo titulo logo-seguro"
+     " logo titulo titulo seguro"
+    ;
+    grid-gap: 15px;
+}
+.titulo-carrito{
+  grid-area: titulo;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icono-tienda{
+  grid-area: logo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icono-tienda img {
+    width: 60px;
+    height: 60px;
+}
+.seguro-carrito{
+    grid-area: seguro;
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
+}
+.logo-sitio-seguro-carrito{
+     grid-area: logo-seguro;
+     display: flex;
+     justify-content: center;
+     align-items: flex-end;
+}
+.logo-sitio-seguro-carrito img {
+    width: 55px;
+    height: 55px;
+}
+
+           /*---MAIN DEL CARRITO---*/
+
+.body-carrito main {
+  grid-area: main-carrito; 
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+       /*---FOOTER DEL CARRITO---*/
+
+.body-carrito footer {
+   grid-area: footer-carrito;
+} 
+.tabla {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.medios-de-pago {
+   width: 200px;
+   height: 40px;
+    }
+    
+}
+
+/*====== VISUALIZACION PARA PC/LAPTOP =======*/
+
+@media screen and (min-width: 1020px) {
+
+    .body-index {
+        width: 100vw;
+        background-color: rgb(149, 231, 250);
+    
+    }
+    .body-hogar{
+        width: 100vw;
+        background-color: rgb(149, 231, 250);
+    }
+    .contenedor {    
+        width: 100vw;
+        background-color: rgb(149, 231, 250);
+        grid-template-areas: 
+         "header"
+         "main"
+         "footer"
+        ;
+        grid-gap: 5px 0px;
+    }
+    header{
+        width: 100vw;
+        grid-area: header;
+        display: grid;
+        grid-template-areas: 
+        "logo-inicio encabezado"
+        "nav nav"
+        ;
+        grid-gap: 10px 0px;
+        background-image: url('../desafio-3(segunda entrega)/media/personas.jpg');
+        background-size: contain;
+        box-sizing: border-box;
+    }
+    .encabezado {
+        grid-area: encabezado;
+        display: flex;
+        justify-content: start;
+        align-items: flex-end;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 40px;
+       -webkit-text-stroke: 6px rgb(24, 173, 173);
+       -webkit-text-fill-color: transparent;
+       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.442);
+        padding: 10px 0px; 
+    }
+    .logo-inicio{
+        grid-area: logo-inicio;
+        display: flex;
+        justify-content: start;
+        align-items: flex-end;
+        padding: 5px;
+        transition: all .3s ease-in-out;
+    }
+    .logo {
+        width: 95px;
+        height: 95px;
+        border-style: solid;
+        border-radius: 40px;
+    }
+    main{
+        grid-area: main;
+    }
+    footer{
+        grid-area: footer;
+    }
+    nav{
+        grid-area: nav;
+        width: 100vw;
+        background-color: rgba(207, 242, 237, 0.955);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border-radius: 30px;
+        padding: 10px 0;
+    }
+    nav div a{
+        font-size: 40px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+        transition: all .3s ease-in-out;
+    }
+    main div{
+        width: 100vw;
+        background-color: rgba(207, 242, 237, 0.955);
+         border-style: solid;
+         border-radius: 30px;
+         border-color: rgba(240, 196, 143, 0.41);
+         display: grid;
+         grid-template-areas: 
+         "seccion seccion"
+         "media descripcion"
+         "media articulo"
+         ;
+         grid-gap: 10px;
+        }
+       .seccion {
+           grid-area: seccion;
+           width: 100vw;
+           font-size: 45px;
+           font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+           text-align: center;
+           padding: 0px 5px;
+           background-color: rgba(121, 121, 169, 0.815);
+          border: solid 3px rgba(37, 167, 190, 0.704);
+           border-radius: 20px;
+           box-sizing: border-box;
+       }
+       .media {
+           grid-area: media;
+           width: 400px;
+           height: 400px;
+           position: relative;
+           left: 7px;
+       }
+       .articulo {
+           grid-area: articulo;
+           font-size: 28px;
+           padding: 5px 10px;
+           text-align: left;
+       }
+       .descripcion {
+           grid-area: descripcion;
+           font-size: 30px;
+           padding: 0px 5px;
+       }
+       ul {
+           width: 100vw;
+           display: flex;
+           flex-direction: row;
+           justify-content: center;
+           list-style: none;
+       }
+       .contactos {
+        width: 35px;
+        height: 35px;
+        padding: 16px 6px;
+        transition: all .4s ease-in-out;
+    }
+      ul li h3 {
+          font-size: 25px;
+          position: relative;
+          top: 15px;
+      } 
+       
+      .carrito-compra {
+          width: 80px;
+          height: 80px;
+          box-sizing: 1px;
+          border: none;
+          padding: 3px;
+          background-color: rgba(10, 85, 125, 0.7);
+          border-radius: 50%;   
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: fixed;
+          left: 95vw;
+          bottom: 1vh;
+          box-shadow: 1px 3px 3px 3px rgba(14, 155, 17, 0.5);  
+        
+          transition: all .3s ease-in-out;
+           
+      }
+      .carrito-compra img {
+          width: 50px;
+          height: 50px;
+          position: relative;
+          right: 3px;
+      }
+     /*------SECCION LISTA DE COMPRAS-----*/
+
+     .body-carrito {
+         width: 100vw;
+         background-color: rgba(50, 246, 246, 0.829);
+         display: grid;
+         grid-template-areas: 
+         "header-carrito"
+         "main-carrito"
+         "footer-carrito"
+         ;
+         grid-gap: 3px;
+     }
+    
+     .body-carrito header {
+         grid-area: header-carrito;
+         display: grid;
+         grid-template-areas: 
+          "logo titulo titulo logo-seguro"
+          " logo titulo titulo seguro"
+         ;
+         grid-gap: 5px;
+     }
+     .titulo-carrito{
+       grid-area: titulo;
+       font-size: 30px;
+       position: relative;
+       top: 40px;
+       right: 40px;
+     }
+     .icono-tienda{
+       grid-area: logo;
+       display: flex;
+       justify-content: center;
+       align-items: end;
+     }
+     .icono-tienda img {
+         width: 100px;
+         height: 100px;
+     }
+     .seguro-carrito{
+         grid-area: seguro;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+     }
+     .logo-sitio-seguro-carrito{
+          grid-area: logo-seguro;
+          display: flex;
+          justify-content: center;
+     }
+     .logo-sitio-seguro-carrito img {
+         width: 100px;
+         height: 100px;
+     }
+
+                /*---MAIN DEL CARRITO---*/
+    
+     .body-carrito main {
+       grid-area: main-carrito; 
+       display: flex;
+       flex-direction: column;
+       justify-content: start;
+    }
+    
+            /*---FOOTER DEL CARRITO---*/
+
+    .body-carrito footer {
+        grid-area: footer-carrito;
+    } 
+    .tabla {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+    .medios-de-pago {
+        width: 300px;
+        height: 80px;
+    }
+
+   /*====== HOVER UTILIZADOS ======*/
+
+    .logo:hover {
+        box-sizing: 5px;
+        border: none;
+        padding: 7px 0px;
+        border-radius: 30px;
+        background-color: aliceblue ;
+        box-shadow: 1px 3px 3px 3px rgba(76, 178, 203, 0.5);
+    }
+
+   nav div a:hover {
+       box-sizing: 5px;
+       border: none;
+       padding: 7px 0px;
+       border-radius: 30px;
+       background-color: aliceblue ;
+       box-shadow: 1px 3px 3px 3px rgba(76, 178, 203, 0.5);  
+       transform: scale(1.2);
+   }
+
+   .carrito-compra:hover {
+    transform: scale(1.3);
+     }
+ 
+    .contactos:hover {
+    transform: scale(1.3);
+     }
+
+}
