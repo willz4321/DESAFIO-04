@@ -40,7 +40,7 @@
         "nav nav"
         ;
         grid-gap: 2px 0px;
-        background-image: url('../desafio-3(segunda entrega)/media/personas.jpg');
+        background-image: url('../DESAFIO-04/media/personas.jpg');
         background-size: contain;
     }
     main{
@@ -298,7 +298,7 @@
         "nav nav"
         ;
         grid-gap: 10px 0px;
-        background-image: url('../desafio-3(segunda entrega)/media/personas.jpg');
+        background-image: url('../DESAFIO-04/media/personas.jpg');
         background-size: contain;
     }
     main{
@@ -548,7 +548,7 @@
         "nav nav"
         ;
         grid-gap: 10px 0px;
-        background-image: url('../desafio-3(segunda entrega)/media/personas.jpg');
+        background-image: url('../DESAFIO-04/media/personas.jpg');
         background-size: contain;
         box-sizing: border-box;
     }
